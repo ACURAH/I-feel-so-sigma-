@@ -23,6 +23,8 @@ public class Main {
     return cv;
   }
 
+  public static int
+
 
     public static void main(String[] args) {
       Random random = new Random();
@@ -37,16 +39,24 @@ public class Main {
         System.out.println("Draw your number");
         value = key.nextInt();
         validEntry(value);
-        if(validEntry(value) == 1){
-          break;
-        }
-        else{
+        if(validEntry(value) == 0){
           System.out.println("Try again, invalid input");
           continue;
+        }
+        if(nim == 0){
+          System.out.println("Game done!")
         }
         nim = nim - value;
         System.out.println(nim);
         nim = nim - drawStone();
         System.out.println(nim);
+        if (nim)
 
       }
+
+      
+      
+
+     
+    }
+}
