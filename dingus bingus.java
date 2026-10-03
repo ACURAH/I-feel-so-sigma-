@@ -1,9 +1,11 @@
+
 import java.util.Scanner;
 import java.util.Random;
 public class Main {
 
+
   public static int validEntry(int num){
-    
+   
     if(num == 1){
       return 1;
     }
@@ -23,7 +25,9 @@ public class Main {
     return cv;
   }
 
-  public static int
+
+
+
 
 
     public static void main(String[] args) {
@@ -43,20 +47,39 @@ public class Main {
           System.out.println("Try again, invalid input");
           continue;
         }
-        if(nim == 0){
-          System.out.println("Game done!")
-        }
         nim = nim - value;
-        System.out.println(nim);
-        nim = nim - drawStone();
-        System.out.println(nim);
-        if (nim)
+      System.out.println("Stones left after your turn: " + nim);
+     
+      e
+      if(nim <= 0){
+        System.out.println("You took the last stone. You lose!");
+        break; // End game
+      }
+     
+      
+      int compDraw = drawStone();
+      System.out.println("Computer draws: " + compDraw);
+      nim = nim - compDraw;
+      System.out.println("Stones left after computer turn: " + nim);
+     
+      
+      if(nim <= 0){
+        System.out.println("Computer took the last stone. You win!");
+        break; // End game
+      }
+
 
       }
 
-      
-      
+
+     
+     
+
 
      
     }
 }
+
+
+
+
